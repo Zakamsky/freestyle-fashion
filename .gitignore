@@ -1,4 +1,5 @@
 .idea
+.idea/**/*.*
 node_modules/
 other/
 build/
@@ -13,6 +14,10 @@ package-lock.json
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.idea/**/freestyle-fashion.iml
+.idea/**/misc.xml
+.idea/**/modules.xml
+.idea/**/vcs.xml
 
 # Sensitive or high-churn files
 .idea/**/dataSources/

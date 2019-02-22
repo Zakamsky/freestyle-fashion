@@ -1,0 +1,8 @@
+
+node_modules/
+other/
+build/
+.babelrc
+gulpfile.babel.js
+package.json
+package-lock.json

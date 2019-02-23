@@ -1,25 +1,25 @@
 *
   box-sizing: border-box
 
-body, html
+body, html, ul, ol
   margin: 0
   padding: 0
   font: $text_content
 
-ul
-  margin: 0
-  padding: 0
+ul, ol
   list-style: none
 
 a
   display: block
   color: $color_black
   transition: all 0.3s ease
-  //transform: scale(1)
-
+  text-decoration: none
   &:hover
     color: rgba($color_black, 0.6)
-    //transform: scale(1.01)
-
+    text-decoration: underline
+a.underlink
+  text-decoration: underline
+  &:hover
+    text-decoration: none
 
 

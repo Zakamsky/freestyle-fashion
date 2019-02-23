@@ -15,18 +15,15 @@
   top: 4.166vh //45px
   left: 6.401vw
 
-
-
-
-
 .logo
   margin: 0 1.214rem
-  height: 9.062vh
+  height: 98px / $v_high *100vh
   img
     height: 100%
 
 .main-menu
-  margin-top: 15.472vh
+  //margin-top: 15.472vh
+  margin-top: 167px / $v_high *100vh
   a
     height: 3.572rem
     padding: 0 1.214rem
@@ -39,19 +36,141 @@
       background: rgba($color_accent, 0.2)
 
     &.active, &:active
-      color: $color_laight
+      color: $color_light
       background: $color_accent
 
 ul.sub-menu
   margin-top: 10.925vh
   padding: 0 1.214rem
-  a
-    text-decoration: none
-    &:hover
-      text-decoration: underline
+
 
 .icons-bar
-  img path
-    fill: green
-    color: green
-    //background-color: green
+  position: absolute
+  top: 73px / $v_high *100vh
+  right: 160px / $v_width * 100vw
+  color: $color_light
+  a
+    line-height: 1.1
+    color: inherit
+    &:hover
+      opacity: 0.8
+  li
+    display: inline-block
+    //width: 22px / $v_width * 100vw
+    height: 22px / $v_high *100vh
+    margin-left: 38px / $v_width * 100vw
+    &:nth-child(2)
+      margin-left: 75px / $v_width * 100vw
+    &:nth-child(3)
+      margin-left: 230px / $v_width * 100vw
+
+  .icon
+    display: inline-block
+    min-height: 22px / $v_high *100vh
+    width: 22px / $v_width * 100vw
+    background: transparent url("../img/svg_ico/cursor_white.svg") center / contain no-repeat
+
+  .cursor
+    margin-right: 16px / $v_width * 100vw
+  .search
+    background-image: url("../img/svg_ico/search_white.svg")
+  .profile
+    background-image: url("../img/svg_ico/profile_white.svg")
+  .favorite
+    background-image: url("../img/svg_ico/favorite_white.svg")
+  .bag
+    background-image: url("../img/svg_ico/bag_white.svg")
+  &.fixed
+    position: fixed
+    .statbar
+      visibility: hidden
+    .search
+      background-image: url("../img/svg_ico/search.svg")
+    .profile
+      background-image: url("../img/svg_ico/profile.svg")
+    .favorite
+      background-image: url("../img/svg_ico/favorite.svg")
+    .bag
+      background-image: url("../img/svg_ico/bag.svg")
+
+.header
+  position: relative
+  width: 100%
+
+.slider
+  position: relative
+  //right: 0
+  margin-left: 278px / $v_width * 100vw
+  top: 32px / $v_high *100vh
+  width: 1642px / $v_width * 100vw
+  max-height: 1016px / $v_high *100vh
+  overflow: hidden
+  img
+    position: relative
+    z-index: -10
+    //min-width: 100%
+    object-fit: cover
+
+.banner
+  position: absolute
+  right: 83px / $v_width * 100vw
+  bottom: 85px / $v_high *100vh
+  width: 295px / $v_width * 100vw
+  height: 295px / $v_high *100vh
+
+  padding-top: 67px / $v_high *100vh
+  padding-left: 27px / $v_high *100vh
+  padding-right: 27px / $v_high *100vh
+  padding-bottom: 1px
+  background: $color_light
+  .banner-title
+    margin-top: 0
+    margin-bottom: 21px / $v_high *100vh
+  p
+    margin: 0
+  .cost
+    vertical-align: top
+    line-height: 51px / $v_high *100vh
+    span
+      vertical-align: top
+
+  .large
+    vertical-align: top
+    font-size: 51px / $v_high *100vh
+    line-height: 1
+  .underlink
+    margin-bottom: 40px / $v_high *100vh
+
+.sale
+  position: absolute
+  left: 142px / $v_width * 100vw
+  bottom: 155px / $v_high *100vh
+  color: $color_light
+  text-shadow: 1px 1px 4px rgba(#000, 0.8)
+
+.slide-markers
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+  position: absolute
+  z-index: -5
+  left: 140px / $v_width * 100vw
+  top: 650px / $v_high *100vh
+  width: 109px / $v_width * 100vw
+  height: 16px / $v_high *100vh
+
+  li
+    flex: 0 0 (30px / $v_width * 100vw)
+    height: 8px / $v_high *100vh
+    background: $color_lightgray
+
+    &.active
+      height: 100%
+      border-right: (5px / $v_width * 100vw) solid $color_lightgray
+      background: $color_accent
+
+
+/* .test
+    display: block
+    width: 50px / $v_width * 100vw
+    height: 50px / $v_high *100vh */

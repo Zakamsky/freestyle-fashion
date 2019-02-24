@@ -9,6 +9,9 @@
 .text-h3
   font: $text_h3
 
+.text-content
+  font: $text_content
+
 .menu
   display: block
   position: fixed
@@ -197,15 +200,18 @@ ul.sub-menu
 .card
   display: grid
   //grid-template-rows: (655px / 14px * 1rem)  20%
-  grid-template-rows: (655px / $v_width * 100vw)  20%
+  grid-template-rows: (655px / $v_width * 100vw)  1fr
   //width: 398px / 14px * 1rpx / 14px * 1rem)  20%
   width: 398px / $v_width * 100vw
 
   text-align: center
   perspective: 1000px
   transform-style: preserve-3d
+  &:hover
+    text-decoration: none
   &:hover &__img
     transform: rotateY(180deg)
+
   &:nth-child(3n+1)
     margin-top: 69px / $v_high *100vh
   &:nth-child(3n+3)
@@ -252,9 +258,36 @@ ul.sub-menu
   .btn--center
     margin: 0.5rem auto
 
+.instashop
+  h2 span
+    margin-left: 31px / $v_width * 100vw
 
-
-    //width: 130px / $v_width * 100vw
+  @each $letter in a, b, c, d, e, f
+      .gr-#{$letter}
+        //display: block
+        //position: relative
+        width: 100%
+        grid-area: #{$letter}
+  .gr-a, .gr-b
+    align-self: end
+  .gr-e
+    align-self: center
+  .gr-item
+    display: block
+    position: relative
+    width: 100%
+    object-fit: contain
+    transition: all 0.4s ease-in-out
+    &:first-child
+      bottom: 0
+    &:hover
+      opacity: 0.6
+.about
+  .section__title
+    margin-bottom: 34px / $v_high *100vh
+  p, a
+    margin-left: 138px / $v_width * 100vw
+//width: 130px / $v_width * 100vw
     //height: 42px / $v_width * 100vw
 /* .test
     display: block

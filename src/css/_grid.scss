@@ -1,0 +1,12 @@
+.instashop__pics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  //grid-auto-rows: minmax(auto, auto);
+  grid-template-rows: 7fr 1fr 7fr;
+  grid-template-areas:
+          "a b c"
+          "a b f"
+          "d e f";
+  grid-gap: 40px / $v_width * 100vw;
+  align-items: stretch;
+}

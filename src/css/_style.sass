@@ -14,6 +14,7 @@
   position: fixed
   top: 4.166vh //45px
   left: 6.401vw
+  z-index: 500
 
 .logo
   margin: 0 1.214rem
@@ -96,17 +97,22 @@ ul.sub-menu
 .header
   position: relative
   width: 100%
+  height: 1046px / $v_high *100vh
+  overflow: hidden
 
 .slider
   position: relative
-  //right: 0
+  right: 0
   margin-left: 278px / $v_width * 100vw
   top: 32px / $v_high *100vh
   width: 1642px / $v_width * 100vw
   max-height: 1016px / $v_high *100vh
   overflow: hidden
   img
+    display: block
     position: relative
+    right: 0
+    margin: 0
     z-index: -10
     //min-width: 100%
     object-fit: cover
@@ -169,7 +175,60 @@ ul.sub-menu
       border-right: (5px / $v_width * 100vw) solid $color_lightgray
       background: $color_accent
 
+.wrapper
+  margin-top: 0
+  margin-left: 416px / $v_width * 100vw
+  margin-right: 140px / $v_width * 100vw
+  //height: 500px
+  //border: 1px red solid
 
+.section__title
+  margin-top: 100px / $v_high *100vh
+  margin-left: 138px / $v_width * 100vw
+  margin-bottom: 85px / $v_high *100vh
+  text-transform: uppercase
+
+.card-deck
+  display: flex
+  justify-content: space-between
+.card
+  width: 398px / $v_width * 100vw
+  //height: 776px / $v_high *100vh
+  text-align: center
+  perspective: 1000px
+  transform-style: preserve-3d
+  &:hover &__img
+    transform: rotateY(180deg)
+
+  &__img
+    position: relative
+    width: 100%
+    top: 0
+    min-height: 650px
+    height: 655px / $v_high *100vh
+    transform-style: preserve-3d
+    transition: transform 0.7s
+
+    &--front, &--back
+      display: block
+      //position: relative
+      top: 0
+      width: 100%
+      //object-fit: cover
+      backface-visibility: hidden
+      box-shadow: 0px 1px 6px rgba($color_gray, 0.5)
+    &--back
+      position: absolute
+      transform: rotateY(180deg)
+
+  &__title
+    margin-top: 50px / $v_high *100vh
+    margin-bottom: 10px / $v_high *100vh
+    text-transform: uppercase
+
+  &__description, &__price
+    margin-top: 0 //10px / $v_high *100vh
+    margin-bottom: 0
 /* .test
     display: block
     width: 50px / $v_width * 100vw

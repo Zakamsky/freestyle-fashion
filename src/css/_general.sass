@@ -22,4 +22,16 @@ a.underlink
   &:hover
     text-decoration: none
 
+a.btn
+  display: block
+  padding: 1em
+  color: $color_light
+  background: $color_black
+  &:hover
+    color: $color_light
+    text-decoration: none
+    background: rgba($color_accent, 0.8)
 
+  &.active, &:active
+    color: $color_light
+    background: $color_accent

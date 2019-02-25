@@ -26,6 +26,12 @@ ul, ol
 .text-light
   color: $color_light
 
+.text-uppercase
+  text-transform: uppercase
+
+.text-muted
+  color: $color_gray
+
 a
   display: block
   color: $color_black
@@ -34,7 +40,7 @@ a
   &:hover
     color: rgba($color_black, 0.6)
     text-decoration: underline
-a.underlink
+a.underlink, .underlink
   text-decoration: underline
   &:hover
     text-decoration: none
@@ -57,3 +63,5 @@ a.btn, button.btn
 button.btn--accent, a.btn--accent
   background: rgba($color_accent, 0.8)
 
+label
+  cursor: pointer

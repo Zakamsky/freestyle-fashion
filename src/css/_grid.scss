@@ -10,3 +10,15 @@
   grid-gap: 40px / $v_width * 100vw;
   align-items: stretch;
 }
+
+.form {
+  display: grid;
+  grid-template-columns:  (414px / $v_width * 100vw) (574px / $v_width * 100vw) (238px / $v_width * 100vw);
+  grid-template-rows:     (90px / $v_width * 100vw) (61px / $v_width * 100vw) (90px / $v_width * 100vw);
+  grid-template-areas:
+          'a b e'
+          'a c e'
+          'a d e';
+
+}
+

@@ -9,6 +9,23 @@ body, html, ul, ol
 ul, ol
   list-style: none
 
+.text-h1
+  font: $text_h1
+//text-transform: uppercase
+
+.text-h2
+  font: $text_h2
+//text-transform: uppercase
+
+.text-h3
+  font: $text_h3
+
+.text-content
+  font: $text_content
+
+.text-light
+  color: $color_light
+
 a
   display: block
   color: $color_black
@@ -22,11 +39,12 @@ a.underlink
   &:hover
     text-decoration: none
 
-a.btn
+a.btn, button.btn
   display: block
   padding: 1em
   color: $color_light
   background: $color_black
+  border: none
   &:hover
     color: $color_light
     text-decoration: none
@@ -35,3 +53,7 @@ a.btn
   &.active, &:active
     color: $color_light
     background: $color_accent
+
+button.btn--accent, a.btn--accent
+  background: rgba($color_accent, 0.8)
+

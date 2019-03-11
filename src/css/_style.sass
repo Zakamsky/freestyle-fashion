@@ -4,6 +4,11 @@
   top: 4.166vh //45px
   left: 6.401vw
   z-index: 500
+  &-top
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: (650px / $v_high *100vh) - 7vh
 
 .logo
   margin: 0 1.214rem
@@ -12,7 +17,9 @@
     height: 100%
 
 .main-menu
-  margin-top: 167px / $v_high *100vh
+  //margin-top: 167px / $v_high *100vh
+  margin-top: 1em
+
   a
     height: 3.572rem
     padding: 0 1.214rem
@@ -110,16 +117,18 @@ ul.sub-menu
   right: 83px / $v_width * 100vw
   bottom: 85px / $v_high *100vh
   width: 295px / $v_width * 100vw
-  height: 295px / $v_high *100vh
+  min-height: 295px / $v_high *100vh
 
   padding-top: 67px / $v_high *100vh
   padding-left: 27px / $v_high *100vh
   padding-right: 27px / $v_high *100vh
   padding-bottom: 1px
+  overflow-wrap: break-spaces
   background: $color_light
   .banner-title
     margin-top: 0
     margin-bottom: 21px / $v_high *100vh
+    overflow-wrap: break-spaces
   p
     margin: 0
   .cost
